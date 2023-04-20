@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int a, b, *p, *q, temp;
+    
+    p = &a;
+    q = &b;
+    
+    a = 2;
+    b = 565;
+    
+    printf("endereço a %p\n",p);
+    printf("conteudo a %d\n",*p);
+    printf("endereço b %p\n",q);
+    printf("conteudo b %d\n",*q);
+    
+    temp = *p;
+    *p = *q;
+    *q = temp;
+    
+    printf("endereço novo a %p\n",p);
+    printf("conteudo novo a %d\n",*p);
+    printf("endereço novo b %p\n",q);
+    printf("conteudo novo b %d\n",*q);
+    
+}
