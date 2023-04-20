@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int *v;
+    int i, num_componentes;
+    
+    printf("Indique o número de componentes do vetor: ");
+    scanf("%d", &num_componentes);
+    
+    v = (int *) malloc(num_componentes * sizeof(int));
+    
+    for(i = 0; i<num_componentes; i++)
+    {
+        printf("Insira o número na posição %d: ",i+1);
+        scanf("%d",&v[i]);
+    }
+    
+    for(i = 0; i<num_componentes; i++)
+    {
+        printf("O número na posição %d é %d\n:", i+1, v[i]);
+    }
+    
+}
